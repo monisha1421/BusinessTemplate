@@ -1,314 +1,543 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Navbar Example</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Business Design</title>
+  
   <style>
-    /* Reset default margins and paddings */
-    * {
+
+    *{
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+  body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color:white;
+}
+.container {
+  display: flex;
+  align-items: flex-end;
+  text-align: right;
+  padding: 150px;
+  gap: 100px;
+  background-color: white;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      }
 
-    /* Navbar Container */
-    .navbar {
-      background-color: #333;
-      color: white;
-      padding: 15px 30px;
+.left-section .image-box {
+  position: relative;
+}
+.image-box img {
+  width: 450px;
+  border-radius: 10px;
+  height: 60vh;
+}
+.growth-box {
+  position: absolute;
+  bottom: 80px;
+  right: -30px;
+  background-color:  #d6366b;
+  color: white;
+  padding: 20px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+}
+.growth-box span{
+  font-size: 24px;
+      display: block;
+}
+.right-section {
+  max-width: 560px;
+  justify-content: flex-end;
+  margin: 50px;
+}
+.right-section h1 {
+  font-size: 35px;
+  color: #333;
+   align-items: flex-end;
+    text-align: right;
+}
+.right-section h1 span {
+  color: #d6366b;
+  font-weight: bold;
+  align-items: flex-end;
+    text-align: right;
+}
+.right-section p {
+  color:grey;
+  padding:20px;
+  font-size: 20px;
+   align-items: flex-end;
+    text-align: right;
+}
+.right-section a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    align-items: flex-end;
+    text-align: right;
+    cursor: pointer;
+    font-size: 20px;
+  }
+   .section7 {
+         font-family: Arial, sans-serif;
+      background: #fff;
+      margin: 0;
+      padding: 40px;
+      color: #333;
+      text-align: center;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+
+    #cor {
+      color: #d21c3d;
+      
+      margin-top: -60px;
+    }
+    .section7 span{
+        color: black;
+    }
+   .section7 p {
+      font-size: 16px;
+      color:black;
+     
+      max-width: 700px;
+      
+    }
+    .para{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 27px;
+    }
+
+    .content-container3 {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0px;
-      
+      gap: 100px;
+      flex-wrap: wrap;
+      background: #f7f7f7;
+      padding: 40px;
+      border-radius: 15px;
     }
 
-    /* Left Title */
-    .navbar .title {
-      font-size: 24px;
-      font-weight: bold;
+    .left-content5 {
+          display: flex;
+    flex: 1;
+    min-width: 250px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 48px;
     }
-
-    /* Right Links */
-    .navbar ul {
-      list-style-type: none;
-      display: flex;
-      gap: 50px;
-    }
-
-    .navbar ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 16px;
-      transition: color 0.3s ease;
-    }
-
-    .navbar ul li a:hover {
-      color: #00bfff;
-    }
-    
-    
-    .parent{
+    #margin{
+        color: black;
         
-        height: 92vh;
-        display: flex;
-        background-image: url("main.jpg ") ;
-      background-size: cover;
-      background-position: center;
-      
+        text-align: left;
     }
-    .child{
-        max-width: 809px;
-        border: 10px solid #041b23;
-        margin: auto;
-        border-radius: 20px;
-        color:whitesmoke;
-        padding:20px;
-        box-sizing: border-box;
-        box-shadow:greenyellow;
-        font-size: 20px;
-        background-color: transparent;
-         box-shadow: 0 0 30px wheat;
+    #correction{
+       
+        text-align: left;
+        font-size: 18px;
     }
-    .container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 50px;
-      background-color:#111;
-      box-shadow: 0 0 30px white;
-    }
+    
 
-    .image-box {
-      flex: 1;
-      padding: 20px;
+    .left-content5 h3 {
+      font-size: 32px;
       
     }
 
-    .image-box img {
-      width: 80%;
-      height: 75vh;
-      border-radius: 10px;
-      border: 8px solid rgb(230, 199, 199);
-      box-shadow: 0 0 30px wheat;
-    }
-
-    .content-box {
-      flex: 1;
-      padding: 20px;
-       border: 8px solid black;
-          border-radius: 10px;
-         box-shadow: 0 0 30px whitesmoke; 
-    }
-
-    .content-box h2 {
-      font-size: 28px;
-      margin-bottom: 15px;
-    align-content: center;
-    color: white;
-    }
-
-    .content-box p {
-      font-size: 18px;
-      color:white;
+    .left-content5 p {
+      font-size: 14px;
    
+    }
+    .left-content5 button {
+      padding: 10px 20px;
+      background-color: #0d1b2a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .right-content5 {
+      flex: 2;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px 15px;
+    }
+.feature {
+          display: flex;
+    text-align: left;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 9px;
+  }
+       .feature img {
+      width: 30px;
+      vertical-align: middle;
+      }
+    .feature h2 {
+      font-weight: bold;
+      font-size: 16px;
+      color: black;
+          }
+    .feature p {
+      font-size: 13px;
+      color:#666;
+     }
+    .feature img{
+        height: 30px;
+        width: 30px;
+        background-color: #d21c3d;
+        border-radius: 5px;
+        padding: 5px;
+    }
+.container1 {
+      display: flex;
+      margin-top: 62px;
+      text-align: center;
+      gap: 20px;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    h2 {
+      font-size: 26px;
+      
+    }
+
+    h2 span {
+      color: #e63946;
+    }
+     .buttons1 {
+     
+      margin-bottom: 40px;
+       border-radius: 10px;
+
+    }
+    .buttons1 button {
+       
+      background-color: #061f2f;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+
+    }
+
+    .cards1 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 56px;
+    }
+
+    .card {
+     
+      width: 300px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    #card-id{
+      background-color: #0f172a;
+    }
+    #card-color{
+      color: white;
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card p {
+      
+      font-weight: bold;
+      padding: 20px;
+    }
+
+      p {
+      display: flex;
+      flex-direction: row;
+      align-content: space-between;
+      justify-content: center;
+      font-size: 14px;
+      color: #666;
+      max-width: 600px;
+    }
+    
+    .view-more {
+      margin-top: 30px;
+    }
+    .view-more button {
+      background-color: #e63946;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
     }
 
     @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        padding: 20px;
+      .card {
+        width: 90%;
       }
     }
-        .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
-    background-color: #000;
+     .button3{
+       display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 64px;
     
-}
-
-.card {
-    background-color: white;
-    width: 325px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    margin: 20px;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
-}
-
-.card img{
-  width: 100%;
-  height: 420px;
-  border-radius: 10px;
-  box-shadow: 0 0 30px white;
-}
-.para{
-  font-size: 50px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  text-align: center;
-  margin-top: 40px;
-}
-footer{
-    background-color: #111;
-}
-.footerContainer{
-    width: 100%;
-    padding: 70px 30px 20px ;
-}
-.socialIcons{
-    display: flex;
-    justify-content:  center;
-}
-.socialIcons a{
-    text-decoration: none;
-    padding:  10px;
-    background-color: white;
-    margin: 10px;
-    border-radius: 50%;
-}
-.socialIcons a i{
-    font-size: 2em;
-    color: black;
-    opacity: 0,9;
-}
-.socialIcons a:hover{
-    background-color: #111;
-    transition: 0.5s;
-}
-.socialIcons a:hover i{
-    color: white;
-    transition: 0.5s;
-}
-.footerContainer{
-  margin-top: 100px;
-}
-.footerNav{
-    margin: 30px 0;
-}
-.footerNav ul{
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-}
-.footerNav ul li a{
-    color:white;
-    margin: 20px;
-    text-decoration: none;
-    font-size: 1.3em;
-    opacity: 0.7;
-    transition: 0.5s;
-
-}
-.footerNav ul li a:hover{
-    opacity: 1;
-}
-.footerBottom{
-    background-color: #000;
-    padding: 20px;
-    text-align: center;
-}
-.footerBottom p{
-    color: white;
-}
-.designer{
-    opacity: 0.7;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 400;
-    margin: 0px 5px;
-}
-@media (max-width: 700px){
-    .footerNav ul{
-        flex-direction: column;
-    } 
-    .footerNav ul li{
-        width:100%;
-        text-align: center;
-        margin: 10px;
     }
-    .socialIcons a{
-        padding: 8px;
-        margin: 4px;
+     .view-more-button {
+     background-color: #c62828; 
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+       justify-content: center;
+       align-items: center;
     }
-}
+    .view-more-button:hover {
+      background-color: #b71c1c;
+      justify-content: center;
+       align-items: center;
+    }
+      .testimonial-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      background-color: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
 
-  </style>
+    
+      .testimonial-text {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+    
+
+    .testimonial-text h4 {
+      color: #a12c2f;
+    
+    }
+     .testimonial-text h2 {
+      
+      font-size: 24px;
+      line-height: 1.4;
+    }
+
+    .cards3 {
+      display: flex;
+      gap: 20px;
+      width: 65%;
+    }
+
+    .card5 {
+      background-color: #0f172a;
+      color: white;
+      padding: 30px;
+      border-radius: 15px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card5 img {
+      width: 40px;
+      height: 40px;
+      background: white;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      align-self: center;
+    }
+
+    .card5 p {
+      font-size: 14px;
+      padding: 10px;
+      color: white;
+      text-align: center;
+    }
+
+    .card5 .name {
+      color: rgb(231, 25, 25);
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .nav-buttons1 {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+    }
+    .nav-buttons1 button {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid #ccc;
+      background: none;
+      cursor: pointer;
+    }
+
+    .nav-buttons1 button:hover {
+      background-color: #ddd;
+    }
+    
+
+</style>
 </head>
 <body>
+  <div class="container">
+    <div class="left-section">
+      <div class="image-box">
+        <img src="creative.jpg" alt="Struggle Quote" />
+        <div class="growth-box"><span>27% </span><br>
+        Productivity <br> increase <br>on average
+      </div>
+    </div></div>
+    <div class="right-section">
+      <h1>Your business deserves <span>great design</span></h1>
+      <p>Logos, websites, packaging designs and more. Our dedicated creative team will help your brand shine in a crowded marketplace.</p>
+      <a href="#">Start Your Brand →</a>
+  </div>
+  </div>
+    <div class="section7" id="secondpage">
+    <h2 id="cor">Why <span>chose us?</span></h2>
+    <div class="para">
+    <p >We provide custom design solutions for your brand, from logos and websites to print materials and social media graphics. Let us bring your vision to life.</p>
+     </div>
+    <div class="content-container3">
+      <div class="left-content5">
+        <h3 id="margin">You can see our journey for your project</h3>
+        <p id="correction">See our steps for your project</p>
+        <div >
+        <button id="bt">READ MORE</button>
+        </div>
+      </div>
 
-  <nav class="navbar">
-    <div class="title">Shankara</div>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#about us">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#">Login</a></li>
-    </ul>
-  </nav>
-  
+      <div class="right-content5">
+       <div class="feature">
+            <img src="fn.svg" alt="Requirement">
+            <h2>Real result</h2>
+            <p>We deliver quality and timely designs.</p>
+        </div>
+        <div class="feature">
+             <img src="fn.svg" alt="Requirement">
+             <h2>Best Perks</h2>
+             <p>Affordable packages tailored for you.</p>
+        </div>
+        <div class="feature">
+             <img src="fn.svg" alt="Requirement">
+             <h2>Friendly Support</h2>
+             <p>We support you throughout your journey.</p>
+        </div>
+        <div class="feature">
+          <img src="fn.svg" alt="Requirement">
+          <h2>Brand Delivery</h2>
+          <p>Fast and professional brand asset delivery.</p>
+        </div>
+        <div class="feature">
+        <img src="fn.svg" alt="Requirement">
+        <h2>Trusted Content</h2>
+        <p>We build trust with reliable content.</p>
+        </div>
+        <div class="feature">
+            <img src="fn.svg" alt="Requirement">
+            <h2>After Sales </h2>
+              <p>Continuous success after project delivery.</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="parent">
-    <div class="child">
-     We aim to provide high-quality services to our clients and ensure customer satisfaction through innovation and dedication.   
+       <div class="container1">
+    <h2>You Will Like <span>These Design</span> Made by Us</h2>
+    <p>Explore our unique designs where passion meets precision, offering an extraordinary blend of artistry and functionality. Immerse yourself in innovation and visual excellence.</p>
+        <div class="buttons1">
+      <button>All Project</button>
+      <button>All Category</button>
+      <button>Brand Logo</button>
+      <button>Book Cover</button>
+    </div>
+       </div>
+    <div class="cards1">
+      <div class="card">
+        <img src="be.jpg" alt="B-Find Design Agency">
+        <p>Befind | Design agency</p>
+      </div>
+      <div class="card">
+        <img src="brand.jpg" alt="Rahul Group Brand Logo">
+        <p>Rahul Group | Brand Logo</p>
+      </div>
+      <div class="card">
+        <img src="camera.jpg" alt="Eyes Window">
+        <p>Eye's Window</p>
+      </div>
+       <div class="card" >
+        <img src="tbb.png" alt="Tembo Engineering">
+        <p >Tembo Engineering</p>
+      </div>
+      <div class="card" id="card-id">
+        <img src="ta.jpg" alt="Talk Session Logo">
+        <p id="card-color">Talk session | Logo</p>
+      </div>
+      <div class="card">
+        <img src="ti.jpg" alt="time sequence">
+        <p>Time Sequence</p>
+        </div>
+        </div>
+</div>
+<div class="button3">
+  <button class="view-more-button">VIEW MORE PRODUCTS</button>
+</div>
+ <div class="testimonial-section">
+    <div class="testimonial-text">
+      <h4>Client Testimonials</h4>
+      <h2>We Care About Our Customers Experience Too</h2>
+      <div class="nav-buttons1">
+        <button>◀</button>
+        <button>▶</button>
+      </div>
+    </div>
+
+    <div class="cards3">
+      <div class="card5">
+        <img src="img2.svg" alt="Profile">
+        <p>Outstanding creative, professionalism, and attention to detail. We're thrilled with the results and highly recommend.</p>
+        <div class="name">Ferdinan Michal</div>
+      </div>
+      <div class="card5">
+        <img src="img2.svg" alt="Profile">
+        <p>Outstanding creative, professionalism, and attention to detail. We're thrilled with the results and highly recommend.</p>
+        <div class="name">Ferdinan Michal</div>
+      </div>
     </div>
   </div>
-  <div class="container" id="about us">
-    <div class="image-box">
-      <img src="faceimg.jpg" alt="Sample Image" >
-    </div>
-    <div class="content-box">
-      <h2>Our Mission</h2>
-      <p>At Shankara, we believe that natural beauty should be celebrated. Shankara aims to modernize Ayurvedic skincare, inspire positivity in people, and celebrate radiance among all ages.Our 100% natural products combine Ayurvedic Wisdom with Modern Scietific Advancements to enhance an individual's life on every level. Shankara supports many humanitarian causes worldwide. Every order you place makes a difference.</p>
-    </div>
-  </div>
-<div class="para">
-  <p >100% NATURAL</p>
-  </div>
-    <div class="card-container" id="services">
-        <div class="card">
-            <img src="cream.jpg" height="22px" width="20">
-            
-        </div>
-        <div class="card">
-           <img src="product.jpg" height="22px" width="20">
-        </div>
-        <div class="card">
-           <img src="lipstick.jpg" height="22px" width="20">
-        </div>
-        
-    </div>
-    <footer>
-    <div class="footerContainer" id="contact">
-      <div class="footerNav">
-            <ul><li><a href="">Home</a></li>
-                <li><a href="">News</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact Us</a></li>
-                <li><a href="">our Team</a></li>
-            </ul>
-        </div>
-        <div class="socialIcons">
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-            <a href=""><i class="fa-brands fa-twitter"></i></a>
-            <a href=""><i class="fa-brands fa-google-plus"></i></a>
-            <a href=""><i class="fa-brands fa-youtube"></i></a>
-        </div>
-        
-        
-    </div>
-    <div class="footerBottom">
-        <p>Copyright &copy;2025; Designed by <span class="designer">MONI</span></p>
-    </div>
-</footer>
 </body>
 </html>
